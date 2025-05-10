@@ -10,7 +10,7 @@ body button {cursor: pointer;}
 body .btn_style {border: 1px solid purple; padding: 10px; font-weight: 600; box-shadow: 0 2px 24px rgba(0,0,0,.14); }
 
 /*============ Bloc header ============*/
-header {position: sticky; margin-top: 0px; top: 0px; background-color: #E0F2F7; }
+header {position: sticky; margin-top: 0px; top: 0px; background-color: #E0F2F7; z-index: 10;}
 header .container_toggle #toggle_navbar {width: 48px; height: 48px; margin: 20px; font-weight: bolder; box-shadow: 0 2px 24px rgba(0,0,0,.14); }
 header nav {position: absolute; transition: all 0.2s ease-in; background-color: #E0F2F7; width: 100%; }
 header nav.close {left: -1024px; }
@@ -27,11 +27,20 @@ main .list_bullets li {position: relative; margin-bottom: 30px; }
 main .list_bullets li:before {content: ""; display:block; position: absolute; width: 10px; height: 10px; border-radius: 50%; background-color: #77bdd0; left: -40px; top: 3px; }
 main .wrapper .last_p {text-align: center; }
 
+/* More info */
+main .wrapper .container_question_response {margin-bottom: 40px; }
+main .wrapper .container_question_response .question {height: 50px; border: 1px solid black; display: flex; text-align: center; align-items: center; padding: 5px; box-shadow: 0 2px 24px rgba(0,0,0,.14); cursor: pointer; position: relative; }
+main .wrapper .container_question_response .question.close::after {content: "+"; display: block; font-size: 32px; position: absolute; right: 5px; }
+main .wrapper .container_question_response .question.open::after {content: "-"; display: block; font-size: 32px; position: absolute; right: 5px; }
+main .wrapper .container_question_response .more_info_response {display: none; }
+
 /* Table */
 main .wrapper table {border: 1px solid black; margin-left: -5px; border-collapse: collapse; }
 main .wrapper table tr, main .wrapper table td {border: 1px solid black; }
-main .wrapper table th {padding: 5px; }
-main .wrapper table td {padding: 5px; }
+main .wrapper table th, main .wrapper table td {padding: 5px; }
+
+/* Table more info */
+main .wrapper .container_question_response table .td_title {text-align: center; padding: 20px 0; }
 
 /*============ Bloc footer ============*/
 footer .wrapper {width: 100%; display: flex; justify-content: space-around; border-top: 2px solid #fecb00; padding: 20px 0; }
