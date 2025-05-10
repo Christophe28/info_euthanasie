@@ -1,0 +1,44 @@
+/* Config */
+body {margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+body main .wrapper {width: calc(100% - 40px); max-width: 1380px; margin: auto;}
+body p {font-size: 16px; letter-spacing: 1.6px; margin-bottom: 20px; }
+body h1 {font-size: 35px; }
+body ul {list-style-type: none; }
+body a {text-decoration: none; cursor: pointer; }
+body button {cursor: pointer;}
+
+body .btn_style {border: 1px solid purple; padding: 10px; font-weight: 600; box-shadow: 0 2px 24px rgba(0,0,0,.14); }
+
+/*============ Bloc header ============*/
+header {position: sticky; margin-top: 0px; top: 0px; background-color: #E0F2F7; }
+header .container_toggle #toggle_navbar {width: 48px; height: 48px; margin: 20px; font-weight: bolder; box-shadow: 0 2px 24px rgba(0,0,0,.14); }
+header nav {position: absolute; transition: all 0.2s ease-in; background-color: #E0F2F7; width: 100%; }
+header nav.close {left: -1024px; }
+header nav.open {left: 0px; }
+header nav ul li {padding: 10px 0; max-width: 400px;}
+
+/*============ Bloc main ============*/
+/* banners */
+main .container_banners {width: 100%; }
+main .container_banners img {width: 100%; height: calc(150px + 20vw); object-fit: cover; object-position: 0 38%;}
+
+/* Li */
+main .list_bullets li {position: relative; margin-bottom: 30px; }
+main .list_bullets li:before {content: ""; display:block; position: absolute; width: 10px; height: 10px; border-radius: 50%; background-color: #77bdd0; left: -40px; top: 3px; }
+main .wrapper .last_p {text-align: center; }
+
+/* Table */
+main .wrapper table {border: 1px solid black; margin-left: -5px; border-collapse: collapse; }
+main .wrapper table tr, main .wrapper table td {border: 1px solid black; }
+main .wrapper table th {padding: 5px; }
+main .wrapper table td {padding: 5px; }
+
+/*============ Bloc footer ============*/
+footer .wrapper {width: 100%; display: flex; justify-content: space-around; border-top: 2px solid #fecb00; padding: 20px 0; }
+
+@media screen and (min-width: 1024px)
+{ /*============ Bloc header ============*/
+  header .container_toggle #toggle_navbar {display: none; }
+  header nav {position: inherit; }
+  header nav ul {display: flex; justify-content: space-around;}
+}
